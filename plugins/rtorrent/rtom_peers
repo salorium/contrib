@@ -82,7 +82,7 @@ my $socket	= $ENV{"socket"} || "";
 my $pattern	= qr/<value><(int|i4|i8|ex\.i8)>(\d+)<\/(int|i4|i8|ex\.i8)><\/value>/;
 my $tpattern	= qr/[0-9A-F]{20}/;
 
-my $line	= "<?xml version=\"1.0\" encoding=\"utf-8\"?><methodCall><methodName>d.multicall</methodName><params><param><value><string>main</string></value></param><param><value><string>d.get_hash=</string></value></param><param><value><string>p.multicall=,p.is_encrypted=,p.is_incoming=</string></value></param></params></methodCall>";
+my $line	= "<?xml version=\"1.0\" encoding=\"utf-8\"?><methodCall><methodName>d.multicall</methodName><params><param><value><string>main</string></value></param><param><value><string>d.hash=</string></value></param><param><value><string>p.multicall=,p.is_encrypted=,p.is_incoming=</string></value></param></params></methodCall>";
 my $llen	= length $line;
 my $header	= "CONTENT_LENGTH\000${llen}\000SCGI\001\000";
 my $hlen	= length $header;
